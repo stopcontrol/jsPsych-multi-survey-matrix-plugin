@@ -1,0 +1,260 @@
+
+ .jspsych-display-element {
+  /*  overflow-y: scroll;*/
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /*height: 100%;
+   width: 100%;*/
+   -webkit-backface-visibility: hidden;
+ }
+
+ .jspsych-display-element:focus {
+   outline: none;
+ }
+
+ .jspsych-content-wrapper {
+   display: flex;
+   /*justify-content: center;
+   align-items: center;*/
+   margin: auto; /* this does the same thing as above two lines in this case */
+   margin-top: 50px;
+   flex: 1 1 100%;
+   width: 110%;
+ }
+
+ .jspsych-content {
+   max-width: 70%; /* this is mainly an IE 10-11 fix */
+   text-align: center;
+   margin: auto; /* this is for overflowing content */
+ }
+
+ .jspsych-top {
+   align-items: flex-start;
+ }
+
+ .jspsych-middle {
+   align-items: center;
+ }
+
+
+/* fonts and type */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+.jspsych-display-element {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+
+.rotate {
+  display: inline-grid;
+  position:relative;
+  left:9%;
+  float:left;
+  display:block;
+  -ms-transform: rotate(315deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);
+  transform-origin: 18% 0%;
+  margin-left: +35px;
+}
+
+.rotate_2 {
+  display: inline-grid;
+  position:relative;
+  left:8%;
+  float:left;
+  display:block;
+  -ms-transform: rotate(315deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);
+  transform-origin: 18% 0%;
+  margin-left: +42px;
+}
+
+.rotate_3 {
+  display: inline-grid;
+  position:relative;
+  left:40%;
+  float:left;
+  display:block;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  transform-origin: 18% 0%;
+  margin-left: +22px;
+}
+
+#response-field {
+display: inline-block;
+  float:left;
+  width: 7%;
+  margin-right: 20px;
+  resize: none;
+}
+
+#response-field_small {
+display: inline-block;
+  float:left;
+  width: 1.5%;
+  margin-right: 1px;
+  resize: none;
+}
+
+#matrix-question {
+  display:inline-block;
+  float:left;
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Form elements like input fields and buttons */
+
+input[type="text"] {
+  font-family: 'Open Sans', 'Arial', sans-sefif;
+  font-size: 14px;
+}
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */
+.jspsych-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.jspsych-btn:hover {
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+.jspsych-btn:disabled {
+  background-color: #eee;
+  color: #aaa;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+#jspsych-progressbar-container {
+color: #777;
+background-color: #ffffff;
+margin-bottom: 1em;
+text-align: center;
+padding: 5px 0px;
+}
+#jspsych-progressbar-container s {}
+#jspsych-progressbar-outer {
+  background-color: #dedede;
+  border-radius: 30px;
+  padding: 1px;
+  width: 800px;
+  margin: auto;
+}
+#jspsych-progressbar-inner {
+  background-color: #aaa;
+  /* #3EB3D7; */
+  width: 0%;
+  height: 0.1em;
+  border-radius: 30px;
+}
+
+/* Control appearance of jsPsych.data.displayData() */
+#jspsych-data-display {
+  text-align: left;
+}
+/* PLUGIN: jspsych-survey-likert */
+
+.jspsych-survey-likert-statement {
+  display: block;
+  font-size: 18px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 2em;
+
+}
+.jspsych-survey-likert-opts {
+  list-style:none;
+  width: 100%;
+  margin: 12px;
+  display:block;
+  font-size: 14px;
+  line-height:1.1em;
+}
+
+.jspsych-survey-likert-opt-label {
+  line-height: 1.1em;
+}
+
+.jspsych-survey-likert-opts:before {
+  content: '';
+  position:relative;
+  top:11px;
+  /*left:9.5%;*/
+  display:block;
+  background-color:#efefef;
+  height:4px;
+  width:100%;
+}
+
+.jspsych-survey-likert-opts:last-of-type {
+  border-bottom: 0;
+}
+
+.jspsych-survey-likert-opts li {
+  display:inline-block;
+  /*width:19%;*/
+  text-align:center;
+  vertical-align: top;
+}
+
+.jspsych-survey-likert-opts li input[type=radio] {
+  display:block;
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-6px;
+}
+
+
+/* PLUGIN: jspsych-survey-text */
+
+#jspsych-survey-text {
+ margin: auto;
+ margin-right: 10px;
+ float:left;
+}
+#jspsych-survey-text-question {
+  margin-left: auto;
+/*  margin-top: -60px;*/
+ margin-right: 1px;
+
+}
+#jspsych-survey-text-response {
+margin:auto;
+
+
+}
+#jspsych-survey-text-preamble {
+  margin-left: auto;
+  margin-top: -25px;
+  padding:20px;
+
+}
